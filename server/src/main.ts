@@ -2,18 +2,20 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import mongoose from 'mongoose';
+import userRoute from './routes/user.route';
 
 mongoose
-  .connect(process.env.MONGODB_URL as string)
+  .connect(process.env.MONGODB_URL as string, {
+    dbName: 'Database',
+  })
   .then(() => console.log('App is connected to MongoDB.'));
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/test', (req: Request, res: Response) => {
-  res.json({ message: 'Hello World' });
-});
+// Create a route group
+app.use('/api/user', userRoute);
 
 app.listen(7000, () => {
   console.log('Server started on port 7000');
