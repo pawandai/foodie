@@ -46,6 +46,8 @@ const UserProfileForm = ({ isLoading, onSave }: Props) => {
             View and change your profile information here
           </FormDescription>
         </div>
+
+        {/* Email Form Field */}
         <FormField
           control={form.control}
           name='email'
@@ -58,6 +60,8 @@ const UserProfileForm = ({ isLoading, onSave }: Props) => {
             </FormItem>
           )}
         />
+
+        {/* Name form field */}
         <FormField
           control={form.control}
           name='name'
@@ -73,6 +77,7 @@ const UserProfileForm = ({ isLoading, onSave }: Props) => {
         />
 
         <div className='flex flex-col md:flex-row gap-4'>
+          {/* AddressLine1 form field */}
           <FormField
             control={form.control}
             name='addressLine1'
@@ -86,6 +91,8 @@ const UserProfileForm = ({ isLoading, onSave }: Props) => {
               </FormItem>
             )}
           />
+
+          {/* City form field */}
           <FormField
             control={form.control}
             name='city'
@@ -99,6 +106,8 @@ const UserProfileForm = ({ isLoading, onSave }: Props) => {
               </FormItem>
             )}
           />
+
+          {/* Country form field */}
           <FormField
             control={form.control}
             name='country'
