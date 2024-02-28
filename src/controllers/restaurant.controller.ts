@@ -1,4 +1,3 @@
-import { MenuItem } from './../../../client/src/types';
 import { Request, Response } from 'express';
 import cloudinary from 'cloudinary';
 import Restaurant from '../models/restaurant.model';
