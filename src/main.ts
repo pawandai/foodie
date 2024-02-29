@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import userRoute from './routes/user.route';
 import { v2 as cloudinary } from 'cloudinary';
 import restaurantRoute from './routes/restaurant.route';
+import restaurantsRoutes from './routes/restaurants.routes';
 
 mongoose
   .connect(process.env.MONGODB_URL as string, {
@@ -25,6 +26,7 @@ app.use(cors());
 // Create a route group
 app.use('/api/user', userRoute);
 app.use('/api/restaurant', restaurantRoute);
+app.use('/api/restaurants', restaurantsRoutes);
 
 app.listen(7000, () => {
   console.log('Server started on port 7000');
