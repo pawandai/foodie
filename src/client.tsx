@@ -7,6 +7,25 @@ import Auth0Providers from './auth/Auth0Provider';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Toaster } from './components/ui/sonner';
 
+import net from 'net';
+
+const server = net.createServer((socket) => {
+  socket.on('error', (error) => {
+    console.error('Socket error:', error);
+    socket.destroy(); // Destroy the socket on error
+  });
+
+  socket.on('data', (data) => {
+    // Handle incoming data
+    console.log('destroying sucket', data);
+  });
+});
+
+server.on('clientError', (error, socket) => {
+  console.error('Client error:', error);
+  socket.destroy();
+});
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

@@ -11,7 +11,7 @@ import { useGetUser } from '@/api/userApi';
 type Props = {
   onCheckout: (userFormData: UserFormData) => void;
   disabled: boolean;
-  isLoading?: boolean;
+  isLoading: boolean;
 };
 
 const CheckoutButton = ({ isLoading, disabled, onCheckout }: Props) => {
