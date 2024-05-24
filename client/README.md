@@ -2,3 +2,5 @@
 
 Tech Used:
 - OAuth Client for Authentication
+- React Query
+- Tailwind CSS
