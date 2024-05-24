@@ -1,7 +1,13 @@
-# The complete food ordering platform
+# Food ordering platform
+This is the complete MERN online food ordering platform. This web application lets you sign in create your restaurant and add food item details. 
 
-Description will be added later... stay tuned!
+Tech Stack used:
+- MongoDB
+- Express.js
+- React (TypeScript)
+- Node (TypeScript)
 
-# Todo
-
-Deploy the backend and frontend to render.com
+```bash
+git clone https://github.com/pawandai/foodie.git
+```
+Feel free to use the code in your project.
